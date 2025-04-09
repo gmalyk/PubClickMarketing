@@ -7,7 +7,9 @@ import CardSelect from 'components/Landpage/Card/Select'
 import { 
     BannerImage,
     BannerOut,
-    BannerContent
+    BannerContent,
+    PhoneImageContainer,
+    PhoneImage
 } from "./styled"; 
 
 export default function Banner(){
@@ -16,14 +18,19 @@ export default function Banner(){
             <BannerImage id="home">
                 <BannerOut />
                 <BannerContent>
-                    <Container>
+                    <Container fluid>
                         <Row>
-                            <Col md={{ size: 3 }} /> 
-                            <Col md={{ size: 6 }}> 
+                            <Col lg={{ size: 6, offset: 1 }} md={{ size: 8, offset: 1 }}> 
                                 <CardSelect /> 
+                            </Col>
+                            <Col lg={5}>
+                                {/* Phone image will be displayed via absolute positioning */}
                             </Col>
                         </Row>
                     </Container>
+                    <PhoneImageContainer>
+                        <PhoneImage />
+                    </PhoneImageContainer>
                 </BannerContent>
             </BannerImage>
         </>

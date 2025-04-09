@@ -4,7 +4,9 @@ import {
     CardBanner,
     CardBannerTitle,
     CardBannerText, 
-    CardBannerDecoration
+    CardBannerDecoration,
+    CardBannerLogo,
+    CardButtonWrapper
 } from "./styled";
 
 import Button from "components/Form/Button";
@@ -18,14 +20,13 @@ export default function CardSelect(){
     return ( 
         <> 
             <CardBanner>
-                <CardBannerTitle>Pub<b>Click</b> Marketing</CardBannerTitle>
-                <CardBannerDecoration />
+                <CardBannerLogo />
                 <CardBannerText>{ t("homebanner_title") }</CardBannerText> 
-                <div>
+                <CardButtonWrapper>
                     <Button color="secondary" onClick={() => scrollToSection('solution')}>
                         { t("homebanner_action") }
                     </Button>
-                </div>
+                </CardButtonWrapper>
             </CardBanner> 
         </> 
     );

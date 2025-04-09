@@ -6,33 +6,20 @@ export const BannerImage = styled.div.attrs({
     position: relative;
     min-height: calc(100vh - 73px);
     width: 100%;
-
-    background: white url(/images/banner2.jpg) no-repeat center center / cover;
-
+    background: white;
     overflow: hidden;
 `; 
 
 export const BannerOut = styled.div.attrs({ 
 })`            
-    min-height: calc(100vh - 73px);
-    width: 100%;
-
-    background: ${props => props.theme.palette.colors.shadow }; 
-    mix-blend-mode: multiply;
+    display: none;
 `; 
 
 export const BannerContent = styled.div.attrs({ 
 })`           
     min-height: calc(100vh - 73px);
     width: 100%; 
-
-    background: -moz-linear-gradient(0deg, ${ props => props.theme.palette.primary.main } -100px, rgba(41,28,68,0) 60%);
-    background: -webkit-linear-gradient(0deg, ${ props => props.theme.palette.primary.main } -100px, rgba(41,28,68,0) 60%);
-    background: linear-gradient(0deg, ${ props => props.theme.palette.primary.main } -100px, rgba(41,28,68,0) 60%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${ props => props.theme.palette.primary.main }",endColorstr="rgba(41,28,68,0)",GradientType=1);
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,4 +27,35 @@ export const BannerContent = styled.div.attrs({
 
 export const BannerCard = styled.div.attrs({ 
 })`           
+`;
+
+export const PhoneImageContainer = styled.div.attrs({
+})`
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+    
+    @media (max-width: 991px) {
+        opacity: 0.3;
+        right: -100px;
+    }
+    
+    @media (max-width: 767px) {
+        display: none;
+    }
+`;
+
+export const PhoneImage = styled.img.attrs({
+    src: '/images/iphone.png',
+    alt: 'PubClick Marketing Mobile App'
+})`
+    height: 100%;
+    max-height: 700px;
+    object-fit: contain;
 `; 

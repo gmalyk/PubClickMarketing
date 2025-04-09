@@ -29,6 +29,26 @@ export default function MoreInfos(){
         { title: t("homemoreinfos_title6"), text: t("homemoreinfos_text6"),   icon: <img src="/icons/social-media.svg" alt="Social Media" style={{width: 48, height: 48}} /> },
     ]
 
+    // Create pairs of items for two-column layout
+    const createItemRows = (items) => {
+        const rows = [];
+        for (let i = 0; i < items.length; i += 2) {
+            rows.push(
+                <Row key={i} className="mb-4">
+                    <Col md={6}>
+                        <Item variant={i} {...items[i]} secondary={false} />
+                    </Col>
+                    {i + 1 < items.length && (
+                        <Col md={6}>
+                            <Item variant={i + 1} {...items[i + 1]} secondary={false} />
+                        </Col>
+                    )}
+                </Row>
+            );
+        }
+        return rows;
+    };
+
     return ( 
         <> 
             <MoreInfosContainer id="services"> 
@@ -44,11 +64,7 @@ export default function MoreInfos(){
                             </MoreInfosText> 
                         </Col>
                     </Row>
-                    {
-                        moreInfos.map((item, key) =>  
-                            <Item key={key} variant={key} {...item} secondary={false}/>
-                        )
-                    }
+                    {createItemRows(moreInfos)}
                 </Container>
             </MoreInfosContainer>
         </>
