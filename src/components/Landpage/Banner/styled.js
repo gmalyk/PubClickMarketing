@@ -31,23 +31,27 @@ export const BannerCard = styled.div.attrs({
 
 export const PhoneImageContainer = styled.div.attrs({
 })`
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 85%;
+    position: relative;
+    height: 75vh;
+    max-height: 600px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     pointer-events: none;
     
+    &.left-side {
+        left: auto;
+        right: auto;
+    }
+    
     @media (max-width: 991px) {
-        opacity: 0.3;
-        right: -100px;
+        height: 60vh;
+        max-height: 500px;
     }
     
     @media (max-width: 767px) {
-        display: none;
+        height: 50vh;
+        max-height: 400px;
     }
 `;
 
@@ -56,6 +60,14 @@ export const PhoneImage = styled.img.attrs({
     alt: 'PubClick Marketing Mobile App'
 })`
     height: 100%;
-    max-height: 700px;
+    max-height: 600px;
     object-fit: contain;
+    
+    @media (max-width: 991px) {
+        max-height: 500px;
+    }
+    
+    @media (max-width: 767px) {
+        max-height: 400px;
+    }
 `; 

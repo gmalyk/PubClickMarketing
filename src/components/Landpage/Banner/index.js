@@ -19,18 +19,17 @@ export default function Banner(){
                 <BannerOut />
                 <BannerContent>
                     <Container fluid>
-                        <Row>
-                            <Col lg={{ size: 6, offset: 1 }} md={{ size: 8, offset: 1 }}> 
+                        <Row className="flex-md-row-reverse">
+                            <Col lg={{ size: 6, offset: 0 }} md={{ size: 8, offset: 0 }} className="d-flex align-items-center justify-content-center justify-content-md-start"> 
                                 <CardSelect /> 
                             </Col>
-                            <Col lg={5}>
-                                {/* Phone image will be displayed via absolute positioning */}
+                            <Col lg={6} className="position-relative d-flex align-items-center justify-content-center">
+                                <PhoneImageContainer className="position-relative left-side">
+                                    <PhoneImage />
+                                </PhoneImageContainer>
                             </Col>
                         </Row>
                     </Container>
-                    <PhoneImageContainer>
-                        <PhoneImage />
-                    </PhoneImageContainer>
                 </BannerContent>
             </BannerImage>
         </>

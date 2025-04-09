@@ -66,8 +66,12 @@ export default function Header({ home }){
                     <Row>
                         <Col md={{ size:7 }}> 
                             <RowCenter>
-                                {/* <AppLogo /> */} 
-                                <HeaderText onClick={logoAction}>Pub<b>Click</b> Marketing</HeaderText>
+                                <img 
+                                    src="/images/Logo.png" 
+                                    alt="PubClick Marketing Logo" 
+                                    style={{ height: '40px', cursor: 'pointer', marginRight: '20px' }}
+                                    onClick={logoAction}
+                                />
                                 <HeaderLeftMenu>
                                     {
                                         options?.left?.map((item, key) => item.button ? 

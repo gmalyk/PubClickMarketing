@@ -21,7 +21,9 @@ export default function CardSelect(){
         <> 
             <CardBanner>
                 <CardBannerLogo />
-                <CardBannerText>{ t("homebanner_title") }</CardBannerText> 
+                <CardBannerTitle>
+                    A complete and strategic solution for independent professionals
+                </CardBannerTitle>
                 <CardButtonWrapper>
                     <Button color="secondary" onClick={() => scrollToSection('solution')}>
                         { t("homebanner_action") }
