@@ -2,10 +2,12 @@ import styled from 'styled-components'
 
 export const MoreInfosContainer = styled.div.attrs({ 
 })`          
-    background: ${ props => props.theme.palette.colors.lightshadow };
-    padding: 45px 0px;
+    background: url('/images/orangeBackground.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
     margin: 100px 0 0;
     position: relative;
+    color: white;
 `; 
 
 export const MoreInfosDecoration = styled.img.attrs({ 
@@ -19,15 +21,17 @@ export const MoreInfosDecoration = styled.img.attrs({
 
 export const MoreInfosTitle = styled.div.attrs({ 
 })`          
-    color: ${ props => props.theme.palette.primary.main };
+    color: white;
     font-size: 32px;
     font-weight: bold;   
     text-align: center;
+    margin-bottom: 15px;
 `; 
 
 export const MoreInfosText = styled.div.attrs({ 
 })`          
-    color: ${ props => props.theme.palette.colors.grey };
+    color: rgba(255, 255, 255, 0.9);
     font-size: 20px;   
     text-align: center;
+    margin-bottom: 30px;
 `; 

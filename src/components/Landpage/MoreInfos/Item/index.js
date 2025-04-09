@@ -12,8 +12,9 @@ export default function MoreInfosItem(props){
     return ( 
         <> 
             <MoreInfosItemContent secondary={props.secondary}>
-                {/* <MoreInfosImage image={props.image} /> */}
-                { props.icon }
+                <div className="icon-container">
+                    { props.icon }
+                </div>
                 <MoreInfosItemSection>
                     <MoreInfosItemText>
                         { props.title }
