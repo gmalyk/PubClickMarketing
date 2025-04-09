@@ -69,7 +69,7 @@ export default function Header({ home }){
                                 <img 
                                     src="/images/Logo.png" 
                                     alt="PubClick Marketing Logo" 
-                                    style={{ height: '40px', cursor: 'pointer', marginRight: '20px' }}
+                                    style={{ height: '55px', cursor: 'pointer', marginRight: '20px' }}
                                     onClick={logoAction}
                                 />
                                 <HeaderLeftMenu>
