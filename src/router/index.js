@@ -2,9 +2,8 @@ import React from "react";
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+  Switch,HashRouter,
+  Route, } from "react-router-dom";
 
 import Landpage from 'screens/Landpage' 
 import NotFound from 'screens/NotFound' 
@@ -24,20 +23,16 @@ import Cancel from "screens/Cancel";
 
 export default function AppRouter() {
     return (
-      <Router>  
-        <div>
-          <Switch>
-            <Route path="/" exact> <Landpage /> </Route> 
-            <Route path="/buy" exact> <Buy /> </Route> 
-            <Route path="/terms" exact> <Terms /> </Route> 
-            <Route path="/policy" exact> <Policy /> </Route> 
-            
-            <Route path="/success" exact> <Success /> </Route> 
-            <Route path="/cancel" exact> <Cancel /> </Route> 
-                        
-            <Route path="*" exact> <NotFound /> </Route>
-          </Switch>
-        </div>
-      </Router>
+      <HashRouter>
+        <Switch>
+          <Route path="/" exact component={Landpage} />
+          <Route path="/buy" exact component={Buy} />
+          <Route path="/terms" exact component={Terms} />
+          <Route path="/policy" exact component={Policy} />
+          <Route path="/success" exact component={Success} />
+          <Route path="/cancel" exact component={Cancel} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+    </HashRouter>
     );
 }
