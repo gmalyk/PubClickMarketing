@@ -24,7 +24,6 @@ import {
 import Button from 'components/Form/Button';
 import { scrollToSection } from 'utils';
 import useI18n from 'hooks/useI18n';
-import LangSelector from 'components/LangSelector';
 
 export default function Header({ home }){
     
@@ -109,7 +108,6 @@ export default function Header({ home }){
                                         <HeaderMenuItem key={key} className={item.active ? "active" : ""} onClick={item.action}>{ item.title }</HeaderMenuItem>
                                     )
                                 } 
-                                <LangSelector />
                             </RowEnd>
                         </Col>
                     </Row>

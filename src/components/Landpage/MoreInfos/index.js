@@ -24,9 +24,9 @@ export default function MoreInfos(){
         { title: t("homemoreinfos_title1"), text: t("homemoreinfos_text1"),  icon: <AdsClickIcon color="black" sx={{width: 48, height: 48}} /> },
         { title: t("homemoreinfos_title2"), text: t("homemoreinfos_text2"),   icon: <GroupIcon color="black" sx={{width: 48, height: 48}} /> },
         { title: t("homemoreinfos_title3"), text: t("homemoreinfos_text3"),   icon: <GoogleIcon color="black" sx={{width: 48, height: 48}} /> },
-        { title: t("homemoreinfos_title4"), text: t("homemoreinfos_text4"),   icon: <GoogleIcon color="black" sx={{width: 48, height: 48}} /> },
-        { title: t("homemoreinfos_title5"), text: t("homemoreinfos_text5"),   icon: <GoogleIcon color="black" sx={{width: 48, height: 48}} /> },
-        { title: t("homemoreinfos_title6"), text: t("homemoreinfos_text6"),   icon: <GoogleIcon color="black" sx={{width: 48, height: 48}} /> },
+        { title: t("homemoreinfos_title4"), text: t("homemoreinfos_text4"),   icon: <img src="/icons/graphic-design.svg" alt="Graphic Design" style={{width: 48, height: 48}} /> },
+        { title: t("homemoreinfos_title5"), text: t("homemoreinfos_text5"),   icon: <img src="/icons/people.svg" alt="People" style={{width: 48, height: 48}} /> },
+        { title: t("homemoreinfos_title6"), text: t("homemoreinfos_text6"),   icon: <img src="/icons/social-media.svg" alt="Social Media" style={{width: 48, height: 48}} /> },
     ]
 
     return ( 

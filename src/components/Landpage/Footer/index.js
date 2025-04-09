@@ -46,11 +46,11 @@ export default function Footer(){
                                 <FooterPhoneContainer>
                                     <FooterPhoneContent>
                                         <PhoneIphoneIcon color="white" sx={{ width: 50, height: 80 }} />
-                                        <FooterLink>+41 78 777 99 99</FooterLink>
+                                        <FooterLink>0798246788</FooterLink>
                                     </FooterPhoneContent> 
                                     <FooterPhoneContent>
                                         <MailOutlineIcon color="white" sx={{ width: 50, height: 80 }} />
-                                        <FooterLink>support@pubclickmarketing.com</FooterLink>
+                                        <FooterLink>contact@publickmarketing.com</FooterLink>
                                     </FooterPhoneContent> 
                                 </FooterPhoneContainer>
                                 
