@@ -43,16 +43,21 @@ export const CardBannerTitle = styled.div.attrs({
 
 export const CardBannerText = styled.div.attrs({ 
 })`           
-    font-size: 24px;
-    color: #333333;
-    margin: 20px 0 30px;
+    font-size: 16px;
+    color: #666666;
+    margin: 0 0 25px;
     text-align: left;
-    max-width: 500px;
-    line-height: 1.4;
-    font-weight: 500;
+    max-width: 550px;
+    line-height: 1.5;
+    font-weight: 400;
     
     @media (max-width: 991px) {
         text-align: center;
+        font-size: 15px;
+    }
+    
+    @media (max-width: 767px) {
+        font-size: 14px;
     }
     
     b{
