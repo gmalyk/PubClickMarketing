@@ -34,12 +34,12 @@ export default function MoreInfos(){
         const rows = [];
         for (let i = 0; i < items.length; i += 2) {
             rows.push(
-                <Row key={i} className="mb-4">
-                    <Col md={6}>
+                <Row key={i} className="mb-4 mb-md-5">
+                    <Col md={6} className="mb-4 mb-md-0">
                         <Item variant={i} {...items[i]} secondary={false} />
                     </Col>
                     {i + 1 < items.length && (
-                        <Col md={6}>
+                        <Col md={6} className="mb-4 mb-md-0">
                             <Item variant={i + 1} {...items[i + 1]} secondary={false} />
                         </Col>
                     )}
@@ -47,6 +47,17 @@ export default function MoreInfos(){
             );
         }
         return rows;
+    };
+
+    // On mobile view, display each item in its own row
+    const createMobileItems = (items) => {
+        return items.map((item, index) => (
+            <Row key={index} className="d-md-none mb-4">
+                <Col xs={12}>
+                    <Item variant={index} {...item} secondary={false} />
+                </Col>
+            </Row>
+        ));
     };
 
     return ( 
@@ -63,7 +74,16 @@ export default function MoreInfos(){
                             </MoreInfosText> 
                         </Col>
                     </Row>
-                    {createItemRows(moreInfos)}
+                    
+                    {/* Desktop view - two columns */}
+                    <div className="d-none d-md-block">
+                        {createItemRows(moreInfos)}
+                    </div>
+                    
+                    {/* Mobile view - single column */}
+                    <div className="d-md-none">
+                        {createMobileItems(moreInfos)}
+                    </div>
                 </Container>
             </MoreInfosContainer>
         </>

@@ -2,20 +2,22 @@ import styled from 'styled-components'
 
 export const MoreInfosItemContent = styled.div.attrs({ 
 })`    
-    margin: 27px auto 0;
+    margin: 0 auto;
     padding: 25px;
     border-radius: 8px; 
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: flex-start;
-    max-width: 95%;
+    width: 95%;
     height: 100%;
     
     @media (max-width: 767px) {
         flex-direction: column;
         text-align: center;
-        padding: 25px 15px;
+        padding: 20px 15px;
+        margin-bottom: 0;
+        width: 100%;
     }
 `;
  
@@ -34,6 +36,7 @@ export const MoreInfosItemSection = styled.div.attrs({
     @media (max-width: 767px) {
         margin-left: 0;
         margin-top: 15px;
+        width: 100%;
     }
 `;
  
