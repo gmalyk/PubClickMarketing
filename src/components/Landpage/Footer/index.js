@@ -61,7 +61,7 @@ export default function Footer(){
                                     </FooterPhoneContent> 
                                     <FooterPhoneContent>
                                         <MailOutlineIcon color="white" sx={{ width: 50, height: 80 }} />
-                                        <FooterLink>contact@publickmarketing.com</FooterLink>
+                                        <FooterLink>contact@publick-marketing.com</FooterLink>
                                     </FooterPhoneContent> 
                                 </FooterPhoneContainer>
                                 
