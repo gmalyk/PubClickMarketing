@@ -1,4 +1,4 @@
-import React from "react"; 
+import React, { useState } from "react"; 
 
 import { Row, Col, Container } from 'reactstrap'; 
 import { useHistory } from 'react-router-dom';
@@ -26,12 +26,23 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Button from "components/Form/Button";
 import useI18n from "hooks/useI18n";
 
+// Import modal components
+import TermsModal from 'components/Modals/Terms';
+import PolicyModal from 'components/Modals/Policy';
+
 export default function Footer(){ 
  
     const history = useHistory();
     const navigate = to => history.push(`/${ to }`);
-
-    const { t } = useI18n()
+    const { t } = useI18n();
+    
+    // State for modals
+    const [termsModalOpen, setTermsModalOpen] = useState(false);
+    const [policyModalOpen, setPolicyModalOpen] = useState(false);
+    
+    // Toggle functions for modals
+    const toggleTermsModal = () => setTermsModalOpen(!termsModalOpen);
+    const togglePolicyModal = () => setPolicyModalOpen(!policyModalOpen);
 
     return ( 
         <> 
@@ -59,14 +70,22 @@ export default function Footer(){
                                 </FooterCopy>
 
                                 <FooterActionsContent>
-                                    <a href="terms"> { t("footer_link1") } </a>
-                                        /   
-                                    <a href="policy"> { t("footer_link2") } </a>
+                                    <a href="#" onClick={(e) => { e.preventDefault(); toggleTermsModal(); }}> 
+                                        { t("footer_link1") } 
+                                    </a>
+                                    /   
+                                    <a href="#" onClick={(e) => { e.preventDefault(); togglePolicyModal(); }}> 
+                                        { t("footer_link2") } 
+                                    </a>
                                 </FooterActionsContent>
                                 
                     </Container>
                 </FooterContent>
             </FooterContainer>
+            
+            {/* Modals */}
+            <TermsModal isOpen={termsModalOpen} toggle={toggleTermsModal} />
+            <PolicyModal isOpen={policyModalOpen} toggle={togglePolicyModal} />
         </>
     );
 }
