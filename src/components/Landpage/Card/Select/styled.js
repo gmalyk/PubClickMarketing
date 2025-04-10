@@ -25,6 +25,9 @@ export const CardBannerTitle = styled.div.attrs({
     letter-spacing: -0.5px;
     line-height: 1.2;
     margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 6px;
     
     @media (max-width: 991px) {
         text-align: center;
@@ -44,12 +47,15 @@ export const CardBannerTitle = styled.div.attrs({
 export const CardBannerText = styled.div.attrs({ 
 })`           
     font-size: 16px;
-    color: #666666;
+    color: #222;
     margin: 0 0 25px;
     text-align: left;
     max-width: 550px;
     line-height: 1.5;
     font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 6px;
     
     @media (max-width: 991px) {
         text-align: center;
