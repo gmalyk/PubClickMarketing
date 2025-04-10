@@ -6,7 +6,10 @@ export const BannerImage = styled.div.attrs({
     position: relative;
     min-height: calc(100vh - 73px);
     width: 100%;
-    background: url('/images/orangeBackground.jpg') no-repeat center center;
+    background-color: #feb676; /* Fallback color if image doesn't load */
+    background-image: url('/images/orangeBakground.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 `; 

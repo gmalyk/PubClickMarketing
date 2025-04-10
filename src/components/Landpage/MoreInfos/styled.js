@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const MoreInfosContainer = styled.div.attrs({ 
 })`          
-    background-color: #fdf1e6;
+    background: url('/images/orangeBakground.jpg') no-repeat center center;
+    background-size: cover;
     padding: 60px 0;
     margin: 100px 0 0;
     position: relative;
