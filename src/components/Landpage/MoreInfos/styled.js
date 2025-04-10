@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 export const MoreInfosContainer = styled.div.attrs({ 
 })`          
-    background: url('/images/orangeBackground.jpg') no-repeat center center;
-    background-size: cover;
+    background-color: #fdf1e6;
     padding: 60px 0;
     margin: 100px 0 0;
     position: relative;
-    color: white;
+    color: black;
 `; 
 
 export const MoreInfosDecoration = styled.img.attrs({ 
@@ -21,7 +20,7 @@ export const MoreInfosDecoration = styled.img.attrs({
 
 export const MoreInfosTitle = styled.div.attrs({ 
 })`          
-    color: white;
+    color: #333;
     font-size: 32px;
     font-weight: bold;   
     text-align: center;
@@ -30,8 +29,11 @@ export const MoreInfosTitle = styled.div.attrs({
 
 export const MoreInfosText = styled.div.attrs({ 
 })`          
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 20px;   
+    color: #666;
+    font-size: 18px;   
     text-align: center;
     margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 `; 

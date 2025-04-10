@@ -51,16 +51,15 @@ export default function MoreInfos(){
 
     return ( 
         <> 
-            <MoreInfosContainer id="services"> 
-                {/* <MoreInfosDecoration /> */}
+            <MoreInfosContainer id="services" style={{backgroundImage: "url('/images/orangeBackground.jpg')"}}> 
                 <Container>
                     <Row>
                         <Col> 
                             <MoreInfosTitle>
-                                { t("homemoreinfos_title") }
+                                Services tailored to your needs
                             </MoreInfosTitle>
                             <MoreInfosText>
-                                { t("homemoreinfos_text") }
+                                We offer various services to advertise you on the internet. Thanks to innovative technology, we can publish your site and reference it on hundreds of platforms.
                             </MoreInfosText> 
                         </Col>
                     </Row>

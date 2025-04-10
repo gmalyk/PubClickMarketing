@@ -3,13 +3,14 @@ import styled from 'styled-components'
 export const MoreInfosItemContent = styled.div.attrs({ 
 })`    
     margin: 27px auto 0;
-    padding: 20px;
-    border-radius: 10px; 
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 8px; 
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     max-width: 95%;
+    height: 100%;
     
     @media (max-width: 767px) {
         flex-direction: column;
@@ -50,6 +51,7 @@ export const MoreInfosItemText = styled.div.attrs({
             text-align: left;
             color: #666;
             margin: 0;
+            line-height: 1.5;
             
             @media (max-width: 767px) {
                 text-align: center;
